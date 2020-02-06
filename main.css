@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #f7f1e3;
+  color: #000;
+  font: 40px 'Poppins', sans-serif;
+  text-transform: uppercase;
+}
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider {
+  padding-left: 15px;
+  height: 60px;
+  overflow: hidden;
+}
+.slider div {
+  height: 50px;
+  margin-bottom: 50px;
+  padding 0 5px;
+}
+.slider-text1 {
+  animation: slide 10s linear infinite;
+}
+@keyframes slide {
+  0% { margin-top: -300px;}
+  5% { margin-top: -200px;}
+  33% { margin-top: -200px;}
+  38% { margin-top: -100px;}
+  66% { margin-top: -100px;}
+  71% { margin-top: 0px;}
+  100% { margin-top: 0px;}
+}
+/*corners */
+.box {
+  position: relative;
+  width: 400px;
+  height: 100px;
+}
+.box::before {
+  content: '[';
+  position: absolute;
+  top: -1px;
+  left: -5px;
+  font-size: 40px;
+}
+.box::after {
+  content: ']';
+  position: absolute;
+  top: -1px;
+  right: -5px;
+  font-size: 40px;
+}
+.box::before, .box::after {
+  color: #b33939;
+  animation: shine 1s linear infinite;
+}
+@keyframes shine {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
